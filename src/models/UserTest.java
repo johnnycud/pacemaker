@@ -4,12 +4,20 @@ import static org.junit.Assert.*;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.junit.Test;
 
-import static models.Fixtures.users;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 public class UserTest
 {
+  private User[] users =
+  {
+    new User ("marge", "simpson", "marge@simpson.com",  "secret"),
+    new User ("lisa",  "simpson", "lisa@simpson.com",   "secret"),
+    new User ("bart",  "simpson", "bart@simpson.com",   "secret"),
+    new User ("maggie","simpson", "maggie@simpson.com", "secret")
+  };
   User homer = new User ("homer", "simpson", "homer@simpson.com",  "secret");
 
   @Test
@@ -18,7 +26,7 @@ public class UserTest
     assertEquals ("homer",               homer.firstName);
     assertEquals ("simpson",             homer.lastName);
     assertEquals ("homer@simpson.com",   homer.email);   
-    assertEquals ("secret",              homer.password);   
+    assertEquals ("secret",              homer.password);
   }
 
   @Test
@@ -35,12 +43,6 @@ public class UserTest
   @Test
   public void testToString()
   {
-	 // Set<Long> ids = new HashSet<>();
-	   // for (User user : users)
-	    //{
-	     // ids.add(user.id);
-	   // }
-      assertEquals ("User{homer, 5, simpson, secret, homer@simpson.com}", homer.toString());
+    assertEquals ("User{homer, "+homer.id+", simpson, secret, homer@simpson.com}", homer.toString());
   }
 }
-

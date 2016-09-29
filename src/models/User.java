@@ -21,7 +21,7 @@ public class User {
 	  @Override  
 	  public int hashCode()  
 	  {  
-	     return Objects.hashCode(this.lastName, this.firstName, this.email, this.password);  
+	     return Objects.hashCode(this.firstName,this.lastName,this.email,this.password);  
 	  }
 	  
 	  public User(String firstName, String lastName, String email, String password)
@@ -36,7 +36,8 @@ public class User {
 	  @Override
 	  public String toString()
 	  {
-		  return toStringHelper(this).addValue(firstName).addValue(id)
+		  return toStringHelper(this).addValue(firstName)
+				  .addValue(id)
                   .addValue(lastName)
                   .addValue(password)
                   .addValue(email)                               
