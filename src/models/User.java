@@ -31,7 +31,7 @@ public class User {
 	  @Override
 	  public String toString()
 	  {
-		  return toStringHelper(this).addValue(firstName)
+		  return toStringHelper(this).addValue(firstName).addValue(id)
                   .addValue(lastName)
                   .addValue(password)
                   .addValue(email)                               

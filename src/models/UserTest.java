@@ -1,4 +1,5 @@
-package controllers;
+package models;
+
 import static org.junit.Assert.*;
 
 import java.util.HashSet;
@@ -34,6 +35,12 @@ public class UserTest
   @Test
   public void testToString()
   {
-    assertEquals ("User{" + homer.id + ", homer, simpson, secret, homer@simpson.com}", homer.toString());
+	 // Set<Long> ids = new HashSet<>();
+	   // for (User user : users)
+	    //{
+	     // ids.add(user.id);
+	   // }
+      assertEquals ("User{homer, 5, simpson, secret, homer@simpson.com}", homer.toString());
   }
 }
+
